@@ -13,5 +13,6 @@ http://www.ownedcore.com/forums/pokemon-go/pokemon-go-hacks-cheats/565264-quicks
 Unzip the files and place them somewhere convenient, follow the instructions on those sites for installing them, and 
 then fill out the paths to those files by editing config.bat (To edit config.bat, right click it and then click Edit.)
 For reference, a file path would look something like this: C:\Users\Bob\Release\NecroBot.exe
+Then, start PogoBotManager.exe to begin!
 
 Happy botting!
