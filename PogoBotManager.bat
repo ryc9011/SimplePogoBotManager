@@ -26,7 +26,7 @@ if %lol% == y goto snipe
 if %lol% == n goto next
 :snipe
 call config.bat
-start %ppath%
+start %ppath%\PogoLocationFeeder.GUI.exe
 :next
 cls
 set /p an=How many accounts are you going to bot? ([1],[2],[3],[4],[5]): 
@@ -37,23 +37,23 @@ if %an% == 4 goto 4a
 if %an% == 5 goto 5a
 :1a
 call config.bat
-start %npath%
+start %npath%\Necrobot.exe
 goto confirm
 :2a
 call config.bat
-start %npath% && start %npath2%
+start %npath%\Necrobot.exe && start %npath2%\Necrobot.exe
 goto confirm
 :3a
 call config.bat
-start %npath% && start %npath2% && start %npath3%
+start %npath%\Necrobot.exe && start %npath2%\Necrobot.exe && start %npath3%\Necrobot.exe
 goto confirm
 :4a
 call config.bat
-start %npath% && start %npath2% && start %npath3% && start %npath4%
+start %npath%\Necrobot.exe && start %npath2%\Necrobot.exe && start %npath3%\Necrobot.exe && start %npath4%\Necrobot.exe
 goto confirm
 :5a
 call config.bat
-start %npath% && start %npath2% && start %npath3% && start %npath4% && start %npath5%
+start %npath%\Necrobot.exe && start %npath2%\Necrobot.exe && start %npath3%\Necrobot.exe && start %npath4%\Necrobot.exe && start %npath5%\Necrobot.exe
 goto confirm
 :confirm
 set /p conf=Did the necessary program(s) start? [Y] Yes / [N] No : 
@@ -71,11 +71,11 @@ set /p var=Ready?:
 echo.
 :quickspin
 call config.bat
-if %an% == 1 start %qpath%
-if %an% == 2 start %qpath% && start %qpath%
-if %an% == 3 start %qpath% && start %qpath% && start %qpath%
-if %an% == 4 start %qpath% && start %qpath% && start %qpath% && start %qpath%
-if %an% == 5 start %qpath% && start %qpath% && start %qpath% && start %qpath% && start %qpath%
+if %an% == 1 start %qpath%\QuickSpin.exe
+if %an% == 2 start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe
+if %an% == 3 start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe
+if %an% == 4 start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe
+if %an% == 5 start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe
 set /p fin=Did QuickSpin(s) correctly start? [Y] Yes / [N] No : 
 if %fin% == y goto done
 if %fin% == n goto retry
