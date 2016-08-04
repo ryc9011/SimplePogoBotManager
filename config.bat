@@ -1,3 +1,7 @@
 set npath=[Replace this with the path to Necrobot.exe, no quotes or brackets]
+set npath2=[Same format. Only fill this out if you have a second account]
+set npath3=[Same format. Only fill this out if you have a third account]
+set npath4=[Same format. Only fill this out if you have a fourth account]
+set npath5=[Same format. Only fill this out if you have a fifth account]
 set ppath=[Replace this with the path to PogoLocationFeeder.GUI.exe, no quotes or brackets]
 set qpath=[Replace this with the path to QuickSpin.exe, no quotes or brackets]
