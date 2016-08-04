@@ -10,6 +10,10 @@ https://github.com/5andr0/PogoLocationFeeder/releases/
 3. QuickSpin, which can be downloaded here:
 http://www.ownedcore.com/forums/pokemon-go/pokemon-go-hacks-cheats/565264-quickspin-pokemongo-softban-unbanner-quickly-unbans-your-softbanned-account.html
 
+Next, check out the SimplePogoBotManager:
+https://github.com/ryc9011/SimplePogoBotManager/wiki
+for information, download link, and more.
+
 Unzip the files and place them somewhere convenient, follow the instructions on those sites for installing them, and 
 then fill out necessary info in config.bat (Right click config.bat > Edit)
 DO NOT rename any bot executable or any of the files you downloaded in the ZIP with this program.
