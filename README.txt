@@ -14,10 +14,10 @@ Unzip the files and place them somewhere convenient, follow the instructions on 
 then fill out the paths to those files by editing config.bat (To edit config.bat, right click it and then click Edit.)
 For reference, the folder path would look something like this:
 C:\Users\Bob\Release if the location of Necrobot.exe is located at C:\Users\Bob\Release\Necrobot.exe
-or like this "C:\Users\Bob Johnson\Release" if the location of Necrobot.exe is located at C:\Users\Bob Johnson\Release\Necrobot.exe
-^^^^ note the use of quotation marks when the directory path has a space/spaces ^^^^
-Then, start PogoBotManager.bat to begin!
 
-This program only supports a maximum of 5 accounts at a time.
+**IMPORTANT!** For now please do not place Necrobot.exe in a directory with spaces in between.
+C:\Users\Bob\Release is fine, C:\Users\Bob\Pokemon Bot\Release is not fine. I will work on a fix/workaround shortly.
+
+Then, start PogoBotManager.bat to begin! This program only supports a maximum of 5 accounts at a time.
 
 Happy botting!
