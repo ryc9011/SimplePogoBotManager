@@ -15,4 +15,6 @@ then fill out the paths to those files by editing config.bat (To edit config.bat
 For reference, a file path would look something like this: C:\Users\Bob\Release\NecroBot.exe
 Then, start PogoBotManager.bat to begin!
 
+This program only supports a maximum of 5 accounts at a time.
+
 Happy botting!
