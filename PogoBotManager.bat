@@ -5,30 +5,58 @@ echo Welcome to the Simple Pokemon Go Bot Manager.
 echo PLEASE READ README.TXT FIRST BEFORE USING THIS PROGRAM.
 echo.
 echo ///  WARNING!  \\\
-echo This program does not have input validation because I suck at programming
+echo This program does not have input validation (yet)
 echo So make sure you type your inputs correctly or you will need to start over.
 echo.
 :start
-set /p in=[Y] Continue / [N] Exit : 
-if %in% == y goto yes
-if %in% == n goto no
-:yes
-echo.
-echo If you don't know the answer to the following question, just press N.
-set /p aa=Are you using a Necrobot config with sniping? (not mass XP) [Y] Yes / [N] No :
-if %aa% == y goto snipe
-if %aa% == n goto necro
+set /p in=[1] 1 accounts [2] Multiple accounts (2-5) [3] Exit : 
+if %in% == 1 goto one
+if %in% == 2 goto two
+if %in% == 3 goto three
+:one
 cls
+echo If you don't know the answer to the following question, just press N.
+set /p aa=Are you using a Necrobot config with sniping? (not mass XP) [Y] Yes / [N] No : 
+if %aa% == y goto snipe
+if %aa% == n goto next
+:two
+echo If you don't know the answer to the following question, just press N.
+set /p lol=Is at least one account going to use a sniping config? [Y] Yes / [N] No : 
+if %lol% == y goto snipe
+if %lol% == n goto next
 :snipe
 call config.bat
 start %ppath%
-echo.
-:necro
+:next
+cls
+set /p an=How many accounts are you going to bot? ([1],[2],[3],[4],[5]): 
+if %an% == 1 goto 1a 
+if %an% == 2 goto 2a
+if %an% == 3 goto 3a
+if %an% == 4 goto 4a
+if %an% == 5 goto 5a
+:1a
 call config.bat
 start %npath%
-echo.
+goto confirm
+:2a
+call config.bat
+start %npath% && start %npath2%
+goto confirm
+:3a
+call config.bat
+start %npath% && start %npath2% && start %npath3%
+goto confirm
+:4a
+call config.bat
+start %npath% && start %npath2% && start %npath3% && start %npath4%
+goto confirm
+:5a
+call config.bat
+start %npath% && start %npath2% && start %npath3% && start %npath4% && start %npath5%
+goto confirm
 :confirm
-set /p conf=Did the programs start? [Y] Yes / [N] No :  
+set /p conf=Did the necessary program(s) start? [Y] Yes / [N] No : 
 if %conf% == y goto final
 if %conf% == n goto retry
 :final
@@ -43,8 +71,12 @@ set /p var=Ready?:
 echo.
 :quickspin
 call config.bat
-start %qpath%
-set /p fin=Did QuickSpin correctly start? [Y] Yes / [N] No : 
+if %an% == 1 start %qpath%
+if %an% == 2 start %qpath% && start %qpath%
+if %an% == 3 start %qpath% && start %qpath% && start %qpath%
+if %an% == 4 start %qpath% && start %qpath% && start %qpath% && start %qpath%
+if %an% == 5 start %qpath% && start %qpath% && start %qpath% && start %qpath% && start %qpath%
+set /p fin=Did QuickSpin(s) correctly start? [Y] Yes / [N] No : 
 if %fin% == y goto done
 if %fin% == n goto retry
 :retry
@@ -54,7 +86,7 @@ echo This program will now exit.
 echo.
 pause
 exit
-:no
+:three
 cls
 echo Please restart this program when you have installed the necessary programs.
 pause
