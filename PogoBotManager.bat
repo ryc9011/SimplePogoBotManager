@@ -25,60 +25,55 @@ if %sn% == y goto 1y
 if %sn% == n goto 1fs
 :1y
 call config.bat
-start %ppath%\PogoLocationFeeder.GUI.exe
+if exist %ppath%\PogoLocationFeeder.GUI.exe (start %ppath%\PogoLocationFeeder.GUI.exe) else goto no
 :1fs
 call config.bat
-start %npath%\Necrobot.exe
-goto confirm
+if exist %npath%\Necrobot.exe (start %npath%\Necrobot.exe) else goto no
+goto qs
 :2a
 call config.bat
 if %sn% == y goto 2y
 if %sn% == n goto 2fs
 :2y
 call config.bat
-start %ppath%\PogoLocationFeeder.GUI.exe
+if exist %ppath%\PogoLocationFeeder.GUI.exe (start %ppath%\PogoLocationFeeder.GUI.exe) else goto no
 :2fs
 call config.bat
-start %npath%\Necrobot.exe && start %npath2%\Necrobot.exe
-goto confirm
+if exist %npath%\Necrobot.exe if exist %npath2%\Necrobot.exe (start %npath%\Necrobot.exe && start %npath2%\Necrobot.exe) else goto no
+goto qs
 :3a
 call config.bat
 if %sn% == y goto 3y
 if %sn% == n goto 3fs
 :3y
 call config.bat
-start %ppath%\PogoLocationFeeder.GUI.exe
+if exist %ppath%\PogoLocationFeeder.GUI.exe (start %ppath%\PogoLocationFeeder.GUI.exe) else goto no
 :3fs
 call config.bat
-start %npath%\Necrobot.exe && start %npath2%\Necrobot.exe && start %npath3%\Necrobot.exe
-goto confirm
+if exist %npath%\Necrobot.exe if exist %npath2%\Necrobot.exe if exist %npath3%\Necrobot.exe (start %npath%\Necrobot.exe && start %npath2%\Necrobot.exe && start %npath3%\Necrobot.exe) else goto no
+goto qs
 :4a
 call config.bat
 if %sn% == y goto 4y
 if %sn% == n goto 4fs
 :4y
 call config.bat
-start %ppath%\PogoLocationFeeder.GUI.exe
+if exist %ppath%\PogoLocationFeeder.GUI.exe (start %ppath%\PogoLocationFeeder.GUI.exe) else goto no
 :4fs
 call config.bat
-start %npath%\Necrobot.exe && start %npath2%\Necrobot.exe && start %npath3%\Necrobot.exe && start %npath4%\Necrobot.exe
-goto confirm
+if exist %npath%\Necrobot.exe if exist %npath2%\Necrobot.exe if exist %npath3%\Necrobot.exe if exist %npath4%\Necrobot.exe (start %npath%\Necrobot.exe && start %npath2%\Necrobot.exe && start %npath3%\Necrobot.exe && start %npath4%\Necrobot.exe) else goto no
+goto qs
 :5a
 call config.bat
 if %sn% == y goto 5y
 if %sn% == n goto 5fs
 :5y
 call config.bat
-start %ppath%\PogoLocationFeeder.GUI.exe
+if exist %ppath%\PogoLocationFeeder.GUI.exe (start %ppath%\PogoLocationFeeder.GUI.exe) else goto no
 :5fs
 call config.bat
-start %npath%\Necrobot.exe && start %npath2%\Necrobot.exe && start %npath3%\Necrobot.exe && start %npath4%\Necrobot.exe && start %npath5%\Necrobot.exe
-goto confirm
-:confirm
-cls
-set /p conf=Did the necessary program(s) start? [Y]/[N]:  
-if %conf% == y goto qs
-if %conf% == n goto no
+if exist %npath%\Necrobot.exe if exist %npath2%\Necrobot.exe if exist %npath3%\Necrobot.exe if exist %npath4%\Necrobot.exe if exist %npath5%\Necrobot.exe (start %npath%\Necrobot.exe && start %npath2%\Necrobot.exe && start %npath3%\Necrobot.exe && start %npath4%\Necrobot.exe && start %npath5%\Necrobot.exe) else goto no
+goto qs
 :qs
 cls
 echo When you are finished botting and have closed all bots, press any key to continue.
@@ -88,18 +83,15 @@ echo \\\\ FOR NOW, JUST LEAVE THIS BATCH FILE MINIMIZED. ////
 echo.
 set /p var=Ready?: 
 :quickspin
+cls
 call config.bat
-if %ac% == 1 start %qpath%\QuickSpin.exe
+if exist %qpath%\QuickSpin.exe (echo.) else goto no
+if %ac% == 1 start %qpath%\Quickspin.exe
 if %ac% == 2 start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe
 if %ac% == 3 start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe
 if %ac% == 4 start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe
 if %ac% == 5 start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe
-echo.
-set /p qsc=Did QuickSpin(s) correctly start? [Y]/[N]: 
-if %qsc% == y goto done
-if %qsc% == n goto no
 :done
-cls
 echo You have finished! Wait for QuickSpin to complete,
 echo then you can log in from your phone/emulator/other device.
 echo Just follow QuickSpin's on-screen prompts.
