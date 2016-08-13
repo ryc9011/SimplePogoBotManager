@@ -1,6 +1,10 @@
 @echo off
 color 0a
 title Simple Pokemon Go Bot Manager
+echo WARNING: BOT AT YOUR OWN RISK
+echo AS OF 8/12/16
+echo SEE README.TXT FOR MORE INFO
+timeout /t 5
 echo Welcome to the Simple Pokemon Go Bot Manager.
 echo PLEASE READ README.TXT FIRST BEFORE USING THIS PROGRAM.
 echo.
@@ -86,8 +90,7 @@ echo This program will then start QuickSpin so that you are not softbanned when 
 echo.
 echo \\\\ FOR NOW, JUST LEAVE THIS BATCH FILE MINIMIZED. ////
 echo.
-set /p var=Ready?: 
-:quickspin
+timeout /t -1
 call config.bat
 if %ac% == 1 start %qpath%\QuickSpin.exe
 if %ac% == 2 start %qpath%\QuickSpin.exe && start %qpath%\QuickSpin.exe
