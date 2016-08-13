@@ -1,6 +1,6 @@
 **IMPORTANT NOTICE:**
 As of this day, 8/12/16, NecroBot and many others were taken down due to legal action from Niantic.
-Therefore, this program will no lonnger be developed/updated.
+Therefore, this program will no longer be developed/updated since it is no longer needed.
 In addition, botters have reported permanent bans. Although unconfirmed so far, it is recommended to bot as human as possible, if at all. Botting is done at your own risk and is not recommended until the botting community receives more information. It appears to be extended softbans only for now, but this is unconfirmed as well. Check Discord channels for up-to-date information, as well as /r/pokemongobotting. If you decide to bot, do not use sniping, as this may further increase your chance of being banned.
 ***************************************************************************************************************************
 
